@@ -87,11 +87,13 @@ If you want to deploy the microservices to Azure Container Instances (ACI):
 3. Use the Azure CLI or Azure Portal to create ACIs for each service, specifying the image and networking settings.
 4. Access the public IP addresses of the ACIs to test the microservices.
 
+## Testing
+You can run tests for each microservice individually using test frameworks like Pytest. Detailed testing instructions can be found in the respective service directories.
+## Monitoring and Scaling
+Monitor the performance and logs of your microservices using Azure monitoring tools. You can also implement scaling strategies within Azure Container Instances to handle increased traffic.
 ## Usage
 To use the microservices, you can send POST requests to the respective endpoints of Service1, and the microservices will communicate with each other to perform the requested operations.
 Here's an example using **'curl'** to test Service1:
-  ```shell
-  curl -X POST -d '{"value": 5}' -H "Content-Type: application/json" http://localhost:8001/input
-
-
+   ```shell
+   curl -X POST -d '{"value": 5}' -H "Content-Type: application/json" http://localhost:8001/input
 
